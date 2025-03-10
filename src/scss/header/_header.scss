@@ -1,0 +1,43 @@
+@use '../base/custom' as var;
+
+.header {
+
+    background-color: var.$oscuro;
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    &__navigation {
+        
+        width: 50%;
+        padding: 0.2rem 3rem;
+        
+        @include var.media-breakpoint-down(md) {    
+            padding: 0.2rem 0.9rem;
+        }
+
+    }
+
+    &__link {
+        text-decoration: none;
+
+        @include var.media-breakpoint-down(md) {    
+            padding: 0.2rem 0.9rem;
+
+            &:nth-child(2) {
+                padding-left: 0.5rem;
+            }
+
+        }
+        
+    }
+
+    &__link--login {
+        padding: 0.2rem 3rem;
+        @include var.media-breakpoint-down(md) {    
+            padding: 0.4rem 1.5rem;
+        }
+    }
+
+    
+}

@@ -1,0 +1,39 @@
+@use '../base/custom' as var;
+
+.landing {
+
+    &__backimage {
+        height: 100vh;
+        background: url(../img/backimage.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    &__blur {
+        height: 100vh;
+        backdrop-filter: blur(5px);
+    }
+
+    &__card {
+        width: 68vw;
+        height: 97vh;
+    
+        margin: 0 auto;
+    
+        background-color: rgba(var.$gris, 0.8);
+        border-radius: 25px;
+    
+        @include var.media-breakpoint-down(md) {
+            margin: 0 auto;
+        }
+    }
+
+    &__banner {
+
+        width: 100%;
+        height: 20vh;
+
+        background: url(../img/landing_banner.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+}

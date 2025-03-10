@@ -1,0 +1,32 @@
+@use '../base/custom' as var;
+
+.carousel {
+
+    &__container {
+        padding: 1rem;
+    }
+
+    &__heading {
+        margin-bottom: 1rem;
+    }
+
+    &__figure {
+
+        height: 40vh;
+
+        @include var.media-breakpoint-down(md) {
+            height: 30vh;
+        }
+
+    }
+
+    &__title {
+        color: var.$mostaza;
+    }
+
+    &__text {
+        @include var.media-breakpoint-down(md) {
+            font-size: 12px;
+        }
+    }
+}

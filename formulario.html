@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario Bootstrap</title>
+    <link rel="stylesheet" href="build/css/styles.css">
+</head>
+<body>
+
+    <div class="formulario__backimage">
+        <div class="formulario__blur">
+            <div class="container">
+                <div class="formulario__card shadow">
+                    <div class="header d-flex justify-content-between">
+                        <div class="header__navigation d-flex justify-content-around ">
+                            <a href="landing.html" class="header__link">Eventos</a>
+                            <a href="tabla.html" class="header__link">Seguimiento</a>
+                        </div>
+                        <div class="header__link--login">
+                            <a href="index.html" class="header__link m-5">Login</a>
+                        </div>
+                    </div>
+
+                    <div class="container px-3 p-md-5">
+                        <h2 class="mb-3 text-center">Datos Ex-Alumno</h2>
+                        
+                        <form action="tabla.html" class="needs-validation" novalidate>
+                            <div class="mb-2 px-md-5 py-md-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un nombre.
+                                </div>
+                            </div>
+
+                            <div class="mb-2 px-md-5 py-md-3">
+                                <label for="apellidos" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="apellidos" placeholder="Ingrese sus apellidos" required>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa tu primer apellido.
+                                </div>
+                            </div>
+
+                            <div class="mb-2 px-md-5 py-md-3">
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" required>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un email válido.
+                                </div>
+                            </div>
+
+                            <div class="mb-2 px-md-5 py-md-3">
+                                <label for="trabajo" class="form-label">Lugar de Trabajo</label>
+                                <input type="text" class="form-control" id="trabajo" placeholder="Ingrese su lugar de trabajo">
+                            </div>
+
+                            <div class="mb-2 px-md-5 py-md-3">
+                                <label for="imagen" class="form-label">Imagen</label>
+                                <input type="file" class="form-control" id="imagen" required>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa una foto de perfil (DNI).
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-secondary mt-2 mx-md-5 center">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </div>
+
+    <script src="build/js/bootstrap.bundle.js"></script>
+    <script src="build/js/BS5-validation.js"></script>
+</body>
+</html>

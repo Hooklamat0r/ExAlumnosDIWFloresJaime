@@ -1,0 +1,30 @@
+@use '../base/custom' as var;
+
+.login__backimage {
+    position: relative;
+    height: 100vh;
+    background: url(../img/logback.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.login__blur {
+    height: 100vh;
+    backdrop-filter: blur(5px);
+}
+
+.container {
+    padding-top: 2vh;
+}
+
+.login-card {
+
+    max-width: 550px;
+  
+    background-color: rgba(var.$gris, 0.8);
+    border-radius: 8px;
+
+    margin: 10vh auto;
+    padding: 2rem;
+    padding-bottom: 0.5rem;
+
+}

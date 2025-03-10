@@ -1,0 +1,87 @@
+@use 'custom' as var;
+@use 'sass:color';
+
+// Mixins
+
+@mixin box-sizing($box-model) {
+    box-sizing: $box-model;
+}
+
+// Media queries
+@mixin mobile {
+    @media screen and (min-width: #{var.$small}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: #{var.$medium}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: #{var.$big}) {
+        @content;
+    }
+}
+
+// Botones
+@mixin btn($bgcolor, $fgcolor) {
+    background-color: $bgcolor;
+    border: none;
+    color: $fgcolor;
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .4s ease;
+    
+    &:hover {
+        background-color: color.scale($bgcolor, $lightness: -20%);
+    }
+}
+
+// Zoom Cards
+
+@mixin zoom($scale, $duration) {
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: $duration;
+
+    &:hover {
+        transform: scale($scale);
+    }
+}
+
+// Movement Img
+
+@mixin tilt($scale, $rotation) {
+    transition: ease 0.5s;
+    // overflow: hidden;
+
+    &:hover {
+        transform: scale($scale) rotate($rotation);
+        cursor: pointer;
+    }
+}
+
+// Flex
+
+@mixin flexible($dis, $direction, $corte, $just, $align) {
+
+    display: $dis;
+    flex-flow: $direction $corte;
+    justify-content: $just;
+    align-items: $align;
+
+}
+
+// Grid
+@mixin grid($columns, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}

@@ -1,0 +1,60 @@
+@use '../base/custom' as var;
+
+.table {
+
+    &__backimage {
+        height: 100vh;
+        background: url(../img/backimage.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    &__blur {
+        height: 100vh;
+        backdrop-filter: blur(5px);
+    }
+
+    &__card {
+        width: 68vw;
+        height: 97vh;
+    
+        margin: 0 auto;
+    
+        background-color: rgba(var.$gris, 0.8);
+        border-radius: 25px;
+    
+        @include var.media-breakpoint-down(md) {
+            margin: 0 auto;
+        }
+    }
+
+    &__container {
+        max-height: 600px;
+        overflow-y: auto;
+        border: 2px solid var.$mostaza;
+        padding: 1rem;
+        border-radius: 5px;
+        background-color: var.$oscuro;
+
+        @include var.media-breakpoint-down(md) {
+            max-height: 500px;
+        }
+
+    }
+
+    &__image {
+        width: 75px;
+        height: 75px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    
+}
+
+.separador {
+    margin-top: 25%;
+
+    @include var.media-breakpoint-down(md) {
+        margin-left: 15.5%;
+        max-width: 300px;
+    }
+}

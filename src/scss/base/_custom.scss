@@ -1,0 +1,44 @@
+@use 'sass:color';
+
+// Reescribimos variables de Bootstrap
+
+$oscuro: #282E2A;
+$naranja: #F34712;
+$mostaza: #F69312;
+$amarillo: #F5CB58;
+$gris: #b5b5b5;
+
+// Asignar paleta de colores a BS
+
+$primary: $naranja;
+$secondary: $amarillo;
+$dark: $oscuro;
+
+// Cards
+$card-border-color: transparent;
+
+// Tipografías
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+// $main_font: 'Roboto-Regular', sans-serif;
+
+$font-family-base: "Montserrat";
+$display-font-weight: 900;
+$heading-font-weight: 700;
+
+// Nav Links
+
+$nav-link-color: $gris;
+$nav-link-hover-color: color.scale($gris, $lightness: -40%);
+
+//Importamos Bootstrap de node_modules (Debe ser lo ultimo aquí)
+// sass --watch src/scss:build/css
+// Tambien se puede poner npm run compilar
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+//npm run purga para purgar el archivo final, y enlazar correctamente el nuevo styles.min

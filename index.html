@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="build/css/styles.css">
+</head>
+<body>
+    <div class="login__backimage">
+        <div class="login__blur">
+            <div class="container">
+                <div class="login-card shadow">
+                    <h3 class="text-center mb-4">LOGIN</h3>
+                    <h3 class="text-center mb-4">IES RUIZ GIJON EX-ALUMNOS</h3>
+                    <form action="landing.html" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ingresa tu email" required>
+                            <div class="invalid-feedback">
+                                Por favor, ingresa un email válido.
+                            </div>
+                        </div>
+        
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña"
+                                required>
+                            <div class="invalid-feedback">
+                                Por favor, ingresa tu contraseña.
+                            </div>
+                        </div>
+        
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberCheck">
+                            <label class="form-check-label" for="rememberCheck">
+                                Recordar
+                            </label>
+                        </div>
+        
+                        <button type="submit" class="btn btn-secondary w-100 mb-3">
+                            Iniciar Sesión
+                        </button>
+                    </form>
+        
+                    <p>¿No tienes cuenta? <a href="#">Registrate aquí</a></p>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="build/js/bootstrap.bundle.js"></script>
+    <script src="build/js/BS5-validation.js"></script>
+
+</body>
+</html>
